@@ -13,7 +13,6 @@ const ClientsPanel = () => {
 
      const [project , setProject ] = useState("")
 
-    //  const[data , setData] = useState([]);
     const [data , setData]  = useState([]);
 
   // Post api for saving the data in the databse
@@ -53,20 +52,20 @@ const ClientsPanel = () => {
       console.log(data);
 
 
-  //  const deleteClient = async(id)=>{
-  //     console.log(id);
+   const deleteClient = async(id)=>{
+      console.log(id);
 
-  //     let result = await fetch(`http://localhost:5002/deleteClient/${id}`,{
-  //       method: "Delete"
-  //     });
-  //     result = await result.json();
-  //     console.log(result);
-  //     if(result)
-  //     {
-  //       inpChange();
-  //       alert("record is deleted");
-  //     }
-  //  }
+      let result = await fetch(`http://localhost:5002/deleteClient/${id}`,{
+        method: "Delete"
+      });
+      result = await result.json();
+      console.log(result);
+      if(result)
+      {
+        inpChange();
+        alert("record is deleted");
+      }
+   }
 
 
   return (
@@ -83,11 +82,11 @@ const ClientsPanel = () => {
           <li>email</li>
           <li>mobileNo</li>
           <li>project</li>
-          <li>||||</li>
         </ul>
         </div>
 
    {/* here we are mapping the data what we are getting from the api */}
+   <div className='datacon'>
         <div className='ul-client'>
       {
         Array.isArray(data)?
@@ -99,16 +98,18 @@ const ClientsPanel = () => {
           <li> {item.email}</li>
           <li>{item.mobile}</li>
           <li>{item.project}</li>
-          {/* <li><Link onClick={deleteClient(item._id)}>delete</Link></li> */}
+          <li><Link onClick={deleteClient(item._id)}>delete</Link></li>
           <li className='link' ><Link to ={'/client/'+item._id } >update</Link></li>
-          <li   className='link'><Link to ='/' >delete</Link></li>
+         {/* 
+            <li   className='link'><Link to ='/' >delete</Link></li> */}
+        
 
         </ul> )  : " "}
-   
-        <ul>
+        </div>
+        
+         </div>
+       
       
-        </ul>
-       </div>
     </div>
      
 

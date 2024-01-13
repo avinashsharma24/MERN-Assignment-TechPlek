@@ -43,9 +43,9 @@
 
 .box-1 {
   /* border: solid; */
-  width: 800px;
+  /* width: 800px;
   margin-left: 100px;
-  margin-top: 20px;
+  margin-top: 20px; */
 }
 
 .box-2 {
@@ -79,35 +79,51 @@ input {
 }
 
 .box-1 {
-  /* border: solid ; */
-  width: 60em;
+  /* border: solid red ; */
+  width: 70em;
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
   border: solid rgba(128, 128, 128, 0.265);
 }
 
 .client-list {
   text-align: center;
   /* border: solid; */
-  margin-right: 70px;
+   width: 740px;
 }
 
 .client-list ul li {
   display: inline-block;
   background-color: rgba(128, 128, 128, 0.498);
-  padding: 5px;
-  width: 100px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  /* padding: 5px; */
+  width: 140px;
   
 }
 
 .ul-client {
   text-align: center;
+  /* border: solid; */
+  padding-right: 8rem;
 }
 
 .ul-client ul li {
   display: inline-block;
-  /* border: 1px solid; */
-  padding: 4px;
-  width: 100px;
+  /* border: solid; */
+  /* padding: 4px; */
+  /* -right: 40px; */
+  /* width: 150px; */
+  width: 130px;
 }
+
+.datacon{
+  /* border: solid; */
+  width: 70rem;
+  /* flex-direction: row; */
+}
+
 
 .c-section{
    display: flex;
